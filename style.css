@@ -1,0 +1,240 @@
+/*Variables*/
+
+:root {
+    /*Primary colors*/
+    --Mainbg: hsl(233, 47%, 7%);
+    --Cardbg: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+    /*Neutral colors*/
+    --White-main-heading-stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*,
+* ::before,
+* ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--Mainbg);
+    min-width: 1440px;
+    min-height: 100vh;
+}
+
+main {
+    height:100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+}
+
+.card {
+    max-width: 569px;
+    max-height: 446px;
+    padding: 74px 121px 64px 70px;
+
+    background-color: var(--Cardbg);
+    border-radius: 8px 0 0 8px;
+    display: inline-flex;
+}
+
+.content {
+    text-align: left;
+}
+
+.content > div > h1 {
+    display: inline;
+    width: 375px;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--White-main-heading-stats);
+}
+
+.content > div > p {
+    width: 345px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--Slightly-transparent-white-main-paragraph);
+    line-height: 1.6;
+
+    margin: 30px 0 74px 0;
+}
+
+.stats {
+    display: inline-flex;
+}
+
+.stats h1 {
+    font-size: 25px;
+    color: var(--White-main-heading-stats);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding-right: 91px;
+}
+
+.stats p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Slightly-transparent-white-stat-headings);
+    text-transform: uppercase;
+
+    padding: 14px 64px 0 0 ;
+}
+
+.aside {
+    display: inline-block;
+    max-width: 540px;
+    max-height: 446px;
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+}
+
+.aside .image img {
+    width: 100%;
+    height: 100%;   
+}
+
+.img-mobile {
+    display: none;
+}
+
+.attribution {
+    color: var(--White-main-heading-stats);
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/*Mobile*/
+
+@media screen and (max-width: 375px) {
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--Mainbg);
+        min-width: 375px;
+        min-height: 100vh;
+    }
+
+    main {
+        height:100vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+
+        max-width: 327px;
+        max-height: 780px;
+        padding: 0 0 24px 0;
+    }
+
+    .mobile-img {
+        order: 1;
+        border-radius: 8px 8px 0 0;
+    }
+
+    img {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: flex;
+        width: 100%;
+        height: 240px;
+        padding-bottom: 44px;
+    }
+
+    .content {
+        order: 2;
+        text-align: center;
+    }
+
+    .content > div > h1 {
+        display: inline;
+        width: 257px;
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--White-main-heading-stats);
+    }
+
+    .content > div > p {
+        width: 254px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--Slightly-transparent-white-main-paragraph);
+        line-height: 1.6;
+
+        margin: 22px 0 calc(44px - 34px) 0;
+    }
+
+    .content div {
+        padding: 0 35px 0 35px;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats h1 {
+        font-size: 22px;
+        color: var(--White-main-heading-stats);
+        font-weight: 700;
+        text-transform: uppercase;
+
+        padding:34px 122px 12px 122px;
+    }
+
+    .stats p {
+        font-size: 14px;
+        color: var(--Slightly-transparent-white-stat-headings);
+        font-weight: 700;
+        text-transform: uppercase;
+
+        padding:0 122px 0 122px;
+    }
+
+    .attribution {
+    color: var(--White-main-heading-stats);
+    position: absolute;
+    bottom: 0.0001%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+}

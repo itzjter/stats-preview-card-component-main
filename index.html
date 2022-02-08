@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,19 +16,48 @@
   </style>
 </head>
 <body>
+  <main>
+    <div class="card">
+      <article class="content">
 
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
+        <div>
+        <h1>Get <h1 style="color: #ae5ee0;">insights</h1><h1> that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.</p>
+        
+        <div class="stats">
+          <div class="companies">
+            <h1>10k+</h1> 
+            <p>companies</p>
+          </div>
+          <div class="templates">
+            <h1>314</h1> 
+            <p>templates</p>
+          </div>
+          <div class="queries">
+            <h1>12m+</h1>
+            <p>queries</p>
+          </div>
+        </div>
+      </article>
+        <div class="mobile-img">
+          <img class="img-mobile" src="images/image-header-mobile.jpg" alt="mobile image"
+            style="filter: invert(5%) sepia(7%) saturate(5155%) hue-rotate(242deg) brightness(60%) contrast(90%);">
+        </div>
+      </div>
+    </div>
+    
+    <div class="aside">
+      <aside class="image">
+        <img class="img-desktop" src="images/image-header-desktop.jpg" alt="desktop image" style= "filter: invert(5%) sepia(7%) saturate(5155%) hue-rotate(242deg) brightness(60%) contrast(90%);">
+      </aside>
+    </div>
+  </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">itzjter</a>.
   </div>
+
 </body>
 </html>
